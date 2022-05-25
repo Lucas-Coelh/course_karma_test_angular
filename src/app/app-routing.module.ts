@@ -5,16 +5,19 @@
  * @since 0.0.3
  */
 
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { DemoRoutes } from "./demo";
-import { ClienteRoutes } from "./cliente";
+import { DemoRoutes } from './demo';
+import { ClienteRoutes } from './cliente';
 
-export const routes: Routes = [...DemoRoutes, ...ClienteRoutes];
+export const routes: Routes = [
+	...DemoRoutes,
+  ...ClienteRoutes
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
